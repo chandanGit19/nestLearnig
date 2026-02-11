@@ -11,7 +11,7 @@ export class AuthController {
 
         console.log(registerUserDto)
 
-       return this.authservice.registreUser()
+       return this.authservice.registreUser(registerUserDto)
     }
 
 }

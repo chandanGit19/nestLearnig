@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { registerUserDto } from 'src/dto/registerUser.dto';
 import { UserService } from 'src/user/user.service';
 
 // interface registerUserDto {
@@ -10,8 +11,8 @@ import { UserService } from 'src/user/user.service';
 export class AuthService {
     constructor(private readonly userService: UserService){}
 
-    registreUser(){
-        return this.userService.createUser()
+    registreUser(registerUserDto: registerUserDto){
+        return this.userService.createUser(registerUserDto)
         // return {message: "User register successfullyy!"}
     }
 
